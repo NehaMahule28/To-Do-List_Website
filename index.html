@@ -1,0 +1,141 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <h1><i class="fas fa-list-check"></i> Smart To-Do List</h1>
+
+    <label class="switch">
+        <input type="checkbox" id="darkToggle">
+        <span class="slider"></span>
+    </label>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <h2>Stay Organized & Productive</h2>
+    <p>Manage your tasks efficiently with categories, due dates, dark mode, and local storage.</p>
+</section>
+
+<!-- Main Container -->
+<div class="container">
+
+    <!-- Add Task Card -->
+    <div class="task-form">
+
+        <input type="text" id="taskInput" placeholder="Enter Task">
+
+        <select id="category">
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="Study">Study</option>
+            <option value="Important">Important</option>
+        </select>
+
+<select id="priority">
+    <option value="Low">🟢 Low Priority</option>
+    <option value="Medium">🟡 Medium Priority</option>
+    <option value="High">🔴 High Priority</option>
+</select>
+
+
+        <input type="date" id="dueDate">
+        <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+
+       <button id="addTaskBtn">Add Task</button>
+
+    </div>
+
+    <!-- Statistics -->
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3 id="totalTasks">0</h3>
+            <p>Total Tasks</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="completedTasks">0</h3>
+            <p>Completed</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="pendingTasks">0</h3>
+            <p>Pending</p>
+        </div>
+
+    </div>
+
+    <!-- Search Bar -->
+
+<div class="search-box">
+    <input
+        type="text"
+        id="searchTask"
+        placeholder="🔍 Search Tasks..."
+    >
+</div>
+
+    <!-- Filters -->
+    <div class="filters">
+
+        <button class="filter-btn active" data-filter="all">
+            All
+        </button>
+
+        <button class="filter-btn" data-filter="completed">
+            Completed
+        </button>
+
+        <button class="filter-btn" data-filter="pending">
+            Pending
+        </button>
+
+    </div>
+
+    <!-- TASKS WILL OPEN HERE -->
+<ul id="taskList"></ul>
+
+<div id="emptyState">
+    <i class="fas fa-clipboard-list"></i>
+    <p>No Tasks Added Yet</p>
+</div>
+
+
+   <button id="toggleCalendarBtn">
+    📅 View Calendar
+</button>
+
+<div class="calendar-container" id="calendarContainer">
+    <div id="calendar"></div>
+</div>
+   
+
+</div>
+
+<!-- Back To Top -->
+<button id="topBtn">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="js/script.js"></script>
+
+
+</body>
+</html>
